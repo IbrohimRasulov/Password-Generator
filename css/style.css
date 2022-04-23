@@ -1,10 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 :root {
+  /** COLORS */
   --background: #1f2937;
   --white-text: #f1f5f9;
   --secondary-text-1: #c0c3c4;
@@ -31,4 +28,4 @@ body {
       hsl(34deg 100% 53%) 78%,
       hsl(45deg 100% 50%) 89%,
       hsl(55deg 100% 50%) 100%);
-  }
+}
