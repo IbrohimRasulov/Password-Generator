@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+  --background: #1f2937;
+  --white-text: #f7f7f7;
+  --secondary-text: #c0c3c4;
+  --main-green: #10b981;
+  --button-background: #273549;
+}
