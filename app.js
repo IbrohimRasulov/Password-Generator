@@ -53,3 +53,11 @@ generatorBtn.addEventListener('click', () => {
     button.textContent = generatePassword();
   });
 });
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.innerHTML !== '<img src="assets/Icon-dots.png" alt="Icon-dots">') {
+      navigator.clipboard.writeText(button.innerHTML);
+    }
+  });
+});
