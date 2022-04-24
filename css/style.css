@@ -47,11 +47,11 @@ body {
   padding: 30px;
 }
 
-#main-btn button {
+#generator-btn button {
   background-color: #10b981;
 }
 
-#main-btn img {
+#generator-btn img {
   width: 20px;
   display: inline;
 }
