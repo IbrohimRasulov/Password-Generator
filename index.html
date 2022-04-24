@@ -8,11 +8,30 @@
   <title>Password Generator</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/input-range.css">
 </head>
 
 <body>
   <div id="container">
+    <div id="content">
+      <h1>Generate a</h1>
+      <h2>random password</h2>
+      <p>Never use an insecure password again.</p>
+    </div>
 
+    <div id="settings">
+      <p>How many characters in your password: </p>
+      <input type="range" min="4" max="16" value="8" id="slider">
+    </div>
+
+    <hr>
+
+    <div id="options">
+      <button id="password-1" class="password-btn"></button>
+      <button id="password-2" class="password-btn"></button>
+      <button id="password-3" class="password-btn"></button>
+      <button id="password-4" class="password-btn"></button>
+    </div>
   </div>
 
   <script src="app.js"></script>

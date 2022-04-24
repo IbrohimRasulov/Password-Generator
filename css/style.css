@@ -2,7 +2,7 @@
 
 :root {
   /** COLORS */
-  --background: #1f2937;
+  --background: #1f29379f;
   --white-text: #f1f5f9;
   --secondary-text-1: #c0c3c4;
   --secondary-text-2: #94a3b8;
@@ -28,4 +28,16 @@ body {
       hsl(34deg 100% 53%) 78%,
       hsl(45deg 100% 50%) 89%,
       hsl(55deg 100% 50%) 100%);
+}
+
+#container {
+  width: 50vw;
+  height: 80vh;
+  background-color: var(--background);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  box-shadow: 8px 16px 16px rgba(0, 0, 0, 0.445);
 }

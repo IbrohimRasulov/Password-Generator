@@ -1,0 +1,5 @@
+input[type=range] {
+  width: 50%;
+  margin: 20px;
+  cursor: pointer;
+}
