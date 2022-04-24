@@ -4,8 +4,7 @@
   /** COLORS */
   --background: #1f2937bb;
   --white-text: #f1f5f9;
-  --secondary-text-1: #c0c3c4;
-  --secondary-text-2: #94a3b8;
+  --secondary-text: #b8c5d6;
   --main-green: #10b981;
   --button-background: #273549;
 }
@@ -47,8 +46,32 @@ body {
   padding: 30px;
 }
 
+#content h1 {
+  color: var(--white-text);
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+#content h2 {
+  color: var(--main-green);
+  font-weight: bolder;
+  font-size: 3rem;
+  line-height: 25px;
+}
+
+#content p {
+  color: var(--secondary-text);
+  font-size: 1.2rem;
+  padding: 25px 0;
+  font-weight: bold;
+}
+
+
+
+
+
 #generator-btn button {
-  background-color: #10b981;
+  background-color: var(--main-green);
 }
 
 #generator-btn img {
@@ -57,7 +80,7 @@ body {
 }
 
 .password-btn {
-  background-color: #475569;
+  background-color: #273549;
   border-radius: 8px;
   padding: 10px 30px;
   outline: none;

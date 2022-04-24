@@ -52,7 +52,6 @@ generatorBtn.addEventListener('click', () => {
   buttons.forEach(button => {
     password = "";
     button.textContent = generatePassword();
-
   });
 });
 
@@ -62,6 +61,7 @@ buttons.forEach(button => {
       navigator.clipboard.writeText(button.innerHTML);
 
       popUp.setAttribute('id', '');
+
       setTimeout(function() {
         popUp.setAttribute('id', 'notification');
       }, 3000)
