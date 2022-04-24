@@ -2,7 +2,7 @@
 
 :root {
   /** COLORS */
-  --background: #1f2937;
+  --background: #1f2937bb;
   --white-text: #f1f5f9;
   --secondary-text-1: #c0c3c4;
   --secondary-text-2: #94a3b8;
@@ -12,6 +12,10 @@
 
 * {
   font-family: 'Nunito', sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 body {
@@ -28,4 +32,61 @@ body {
       hsl(34deg 100% 53%) 78%,
       hsl(45deg 100% 50%) 89%,
       hsl(55deg 100% 50%) 100%);
+}
+
+#container {
+  width: 600px;
+  height: 75vh;
+  background-color: var(--background);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  box-shadow: 8px 16px 16px rgba(0, 0, 0, 0.445);
+  padding: 30px;
+}
+
+#generator-btn button {
+  background-color: #10b981;
+}
+
+#generator-btn img {
+  width: 20px;
+  display: inline;
+}
+
+.password-btn {
+  background-color: #475569;
+  border-radius: 8px;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#notification {
+  display: none;
+}
+
+.pop-up {
+  background-color: #10b981;
+  width: 250px;
+  height: 70px;
+  border-radius: 10px;
+  vertical-align: middle;
+  box-shadow: 8px 16px 16px rgba(0, 0, 0, 0.445);
+  animation-name: popup;
+  animation-duration: 2s;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.pop-up p {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #f1f5f9;
+  font-weight: bold;
+  line-height: 70px;
 }

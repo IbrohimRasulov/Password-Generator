@@ -8,11 +8,47 @@
   <title>Password Generator</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/input-range.css">
 </head>
 
 <body>
   <div id="container">
+    <div id="content">
+      <h1>Generate a</h1>
+      <h2>random password</h2>
+      <p>Never use an insecure password again.</p>
+    </div>
 
+    <div id="settings">
+      <div id="input-range">
+        <p>Characters in your password: <span>8</span></p>
+        <input type="range" min="4" max="16" value="8" step="1" id="slider">
+      </div>
+      <div id="input-symbols">
+        <input type="checkbox" id="symbols" checked>
+        <label for="symbols">Symbols</label>
+      </div>
+      <div id="input-letters">
+        <input type="checkbox" id="letters" checked>
+        <label for="letters">Letters</label>
+      </div>
+      <div id="generator-btn">
+        <button><img src="assets/Icon-thunder.png" alt="Icon-thunder"> Generate passwords</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="options">
+      <button class="password-btn"></button>
+      <button class="password-btn"></button>
+      <button class="password-btn"></button>
+      <button class="password-btn"></button>
+    </div>
+  </div>
+
+  <div id="notification" class="pop-up">
+    <p>Password copied !</p>
   </div>
 
   <script src="app.js"></script>
