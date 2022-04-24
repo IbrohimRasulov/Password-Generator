@@ -22,7 +22,7 @@
     <div id="settings">
       <div id="input-range">
         <p>Characters in your password: <span>8</span></p>
-        <input type="range" min="4" max="16" value="8" id="slider">
+        <input type="range" min="4" max="16" value="8" step="1" id="slider">
       </div>
       <div id="input-symbols">
         <input type="checkbox" id="symbols" checked>
@@ -40,11 +40,15 @@
     <hr>
 
     <div id="options">
-      <button id="password-1" class="password-btn"></button>
-      <button id="password-2" class="password-btn"></button>
-      <button id="password-3" class="password-btn"></button>
-      <button id="password-4" class="password-btn"></button>
+      <button class="password-btn"></button>
+      <button class="password-btn"></button>
+      <button class="password-btn"></button>
+      <button class="password-btn"></button>
     </div>
+  </div>
+
+  <div id="notification" class="pop-up">
+    <p>Password copied !</p>
   </div>
 
   <script src="app.js"></script>

@@ -5,6 +5,7 @@ const symbolsCheckbox = document.querySelector('#symbols');
 const lettersCheckbox = document.querySelector('#letters');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const generatorBtn = document.querySelector('#generator-btn button');
+const popUp = document.querySelector('#notification')
 
 let charset;
 let password = "";
@@ -51,6 +52,7 @@ generatorBtn.addEventListener('click', () => {
   buttons.forEach(button => {
     password = "";
     button.textContent = generatePassword();
+
   });
 });
 
@@ -58,6 +60,11 @@ buttons.forEach(button => {
   button.addEventListener('click', () => {
     if (button.innerHTML !== '<img src="assets/Icon-dots.png" alt="Icon-dots">') {
       navigator.clipboard.writeText(button.innerHTML);
+
+      popUp.setAttribute('id', '');
+      setTimeout(function() {
+        popUp.setAttribute('id', 'notification');
+      }, 3000)
     }
   });
 });
