@@ -2,7 +2,7 @@
 
 :root {
   /** COLORS */
-  --background: #1f2937bb;
+  --background: #1f2937c8;
   --white-text: #f1f5f9;
   --secondary-text: #b8c5d6;
   --main-green: #10b981;
@@ -80,7 +80,7 @@ body {
 }
 
 .password-btn {
-  background-color: #273549;
+  background-color: var(--button-background);
   border-radius: 8px;
   padding: 10px 30px;
   outline: none;
