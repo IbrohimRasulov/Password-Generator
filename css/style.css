@@ -12,6 +12,10 @@
 
 * {
   font-family: 'Nunito', sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 body {
@@ -31,8 +35,8 @@ body {
 }
 
 #container {
-  width: 50vw;
-  height: 80vh;
+  width: 600px;
+  height: 75vh;
   background-color: var(--background);
   position: absolute;
   top: 50%;
@@ -40,4 +44,23 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 25px;
   box-shadow: 8px 16px 16px rgba(0, 0, 0, 0.445);
+  padding: 30px;
+}
+
+#main-btn button {
+  background-color: #10b981;
+}
+
+#main-btn img {
+  width: 20px;
+  display: inline;
+}
+
+.password-btn {
+  background-color: #475569;
+  border-radius: 8px;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }

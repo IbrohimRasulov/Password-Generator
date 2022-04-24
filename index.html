@@ -20,8 +20,21 @@
     </div>
 
     <div id="settings">
-      <p>How many characters in your password: </p>
-      <input type="range" min="4" max="16" value="8" id="slider">
+      <div id="input-range">
+        <p>Characters in your password: </p>
+        <input type="range" min="4" max="16" value="8" id="slider">
+      </div>
+      <div id="input-symbols">
+        <input type="checkbox" id="symbols">
+        <label for="symbols">Symbols</label>
+      </div>
+      <div id="input-letters">
+        <input type="checkbox" id="letters">
+        <label for="letters">Letters</label>
+      </div>
+      <div id="main-btn">
+        <button><img src="assets/Icon-thunder.png" alt="Icon-thunder"> Generate passwords</button>
+      </div>
     </div>
 
     <hr>
