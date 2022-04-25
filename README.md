@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/78875455/165054032-381b1a8e-a638-434b-
 
 ## Live Demo
 
-[Live Demo Link](https://ibrohimrasulov.github.io/Password-Generator/)
+[Live Demo Link](https://generate-a-password.netlify.app/)
 
 ## Authors
 
