@@ -54,7 +54,7 @@ generatorBtn.addEventListener('click', () => {
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    if (button.innerHTML !== '<img src="assets/Icon-dots.png" alt="Icon-dots">') {
+    if (button.innerHTML !== '<i class="fa-solid fa-ellipsis fa-xl"></i>') {
       navigator.clipboard.writeText(button.innerHTML);
 
       popUp.classList.add('animation');

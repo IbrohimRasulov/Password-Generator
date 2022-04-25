@@ -1,6 +1,6 @@
 /** The popup design code */
 .pop-up {
-  background-color: #10b981;
+  background-color: var(--green);
   width: 250px;
   height: 70px;
   border-radius: 10px;
@@ -14,7 +14,7 @@
 .pop-up p {
   font-size: 1.4rem;
   text-align: center;
-  color: #f1f5f9;
+  color: var(--primary-text);
   font-weight: bold;
   line-height: 70px;
 }

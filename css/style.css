@@ -2,11 +2,13 @@
 
 :root {
   --background: #1f2937c8;
-  --white-text: #f1f5f9;
+  --primary-text: #f1f5f9;
   --secondary-text: #b8c5d6;
-  --main-green: #10b981;
-  --button-background: #1e293b92;
+  --green: #10b981;
+  --button-background: #1e293b14;
+  --slider: #4471ef;
 
+  /** Generate button shadows **/
   --shadow-color: 329deg 42% 7%;
   --shadow-elevation-low:
     0.3px 0.3px 0.3px hsl(var(--shadow-color) / 1),
@@ -19,6 +21,30 @@
     2.1px 2.2px 2.3px -1.7px hsl(var(--shadow-color) / 1),
     14.3px 15.2px 15.7px -3.3px hsl(var(--shadow-color) / 1),
     47.6px 50.6px 52.1px -5px hsl(var(--shadow-color) / 0.51);
+
+  /** Optionn button shadows **/
+  --option-shadow-color: 279deg 47% 7%;
+  --option-shadow-elevation-low:
+    0.5px 0.4px 0.8px hsl(var(--option-shadow-color) / 0.38),
+    1px 0.8px 1.6px -0.9px hsl(var(--option-shadow-color) / 0.47),
+    2.5px 2.1px 4px -1.8px hsl(var(--option-shadow-color) / 0.57);
+  --option-shadow-elevation-medium:
+    0.5px 0.4px 0.8px hsl(var(--option-shadow-color) / 0.31),
+    1.8px 1.5px 2.9px -0.4px hsl(var(--option-shadow-color) / 0.36),
+    3.5px 2.9px 5.6px -0.9px hsl(var(--option-shadow-color) / 0.41),
+    6.7px 5.5px 10.7px -1.3px hsl(var(--option-shadow-color) / 0.46),
+    12.7px 10.4px 20.2px -1.8px hsl(var(--option-shadow-color) / 0.51);
+  --option-shadow-elevation-high:
+    0.5px 0.4px 0.8px hsl(var(--option-shadow-color) / 0.29),
+    4.2px 3.4px 6.6px -0.2px hsl(var(--option-shadow-color) / 0.32),
+    7.6px 6.2px 12.1px -0.4px hsl(var(--option-shadow-color) / 0.34),
+    11.4px 9.3px 18.1px -0.6px hsl(var(--option-shadow-color) / 0.36),
+    16.1px 13.2px 25.6px -0.8px hsl(var(--option-shadow-color) / 0.38),
+    22.4px 18.4px 35.7px -1px hsl(var(--option-shadow-color) / 0.41),
+    30.9px 25.4px 49.2px -1.2px hsl(var(--option-shadow-color) / 0.43),
+    42.3px 34.7px 67.3px -1.4px hsl(var(--option-shadow-color) / 0.45),
+    57.1px 46.9px 90.9px -1.6px hsl(var(--option-shadow-color) / 0.47),
+    76.1px 62.4px 121px -1.8px hsl(var(--option-shadow-color) / 0.5);
 }
 
 * {
@@ -47,7 +73,7 @@ body {
 
 #container {
   width: 600px;
-  height: 80vh;
+  height: 550px;
   background-color: var(--background);
   position: absolute;
   top: 50%;
@@ -59,13 +85,13 @@ body {
 }
 
 #content h1 {
-  color: var(--white-text);
+  color: var(--primary-text);
   font-size: 3rem;
   font-weight: bolder;
 }
 
 #content h2 {
-  color: var(--main-green);
+  color: var(--green);
   font-weight: bolder;
   font-size: 3rem;
   line-height: 25px;
@@ -108,15 +134,15 @@ body {
 }
 
 #generator-btn button {
-  background-color: var(--main-green);
-  border: 1px solid var(--main-green);
+  background-color: var(--green);
+  border: 1px solid var(--green);
   border-radius: 5px;
   display: flex;
   align-items: center;
   cursor: pointer;
   box-shadow: var(--shadow-elevation-medium);
-  transition: ease-in-out 0.08s;
-  color: var(--white-text);
+  transition: ease-in-out 0.1s;
+  color: var(--primary-text);
   font-size: 1.1rem;
   font-weight: bold;
   padding: 5px 12px;
@@ -131,7 +157,7 @@ body {
   transform: scale(0.96);
 }
 
-#generator-btn img {
+#generator-btn i {
   width: 20px;
   display: inline;
 }
@@ -160,10 +186,22 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--main-green);
+  color: var(--green);
+  box-shadow: var(--option-shadow-elevation-medium);
+  font-weight: bold;
+  transition: ease-in-out 0.1s;
 }
 
-.password-btn img {
-  width: 30px;
-  filter: opacity(0.1);
+.password-btn:active {
+  box-shadow: var(--option-shadow-elevation-low);
+  transform: scale(0.96);
+  background-color: #1e293b00;
+}
+
+.password-btn:hover {
+  color: aqua;
+}
+
+.password-btn i {
+  color: #1a2435;
 }

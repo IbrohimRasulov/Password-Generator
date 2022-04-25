@@ -10,7 +10,7 @@
   width: 45%;
   height: 2px;
   margin: 10px 0;
-  background: #4471ef;
+  background: var(--slider);
   border: none;
   outline: none;
 }
@@ -20,12 +20,12 @@
   width: 20px;
   height: 20px;
   background: #511e3f;
-  border: 2px solid #4471ef;
+  border: 2px solid var(--slider);
   border-radius: 50%;
 }
 
 #slider::-webkit-slider-thumb:hover {
-  background: #4471ef;
+  background: var(--slider);
   cursor: pointer;
 }
 
