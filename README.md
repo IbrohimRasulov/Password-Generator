@@ -1,8 +1,8 @@
 # Password Generator
 
-> Unit Conversion app helps you to convert units between meter-foot, kilo-pound, liter-gallon, celsius-fahrenheit. This is a complete solo project, part of [Scrimba JavaScript course](https://scrimba.com/learn/learnjavascript) using this given [figma design](https://www.figma.com/file/AdqUVRQCZGP1zRcEvzmJTm/Unit-Conversion?node-id=0%3A1).
+> Password generator is a web app that creates random and customized passwords for users. It helps users create stronger passwords with symbols and letter that provide greater security for a given type of access. This is a complete solo project, part of [Scrimba JavaScript course](https://scrimba.com/learn/learnjavascript) using this given [figma design](https://www.figma.com/file/YRO9Iw5IYaOorjnRyNz4bV/Random-Password-Generator?node-id=102%3A702).
 
-
+https://user-images.githubusercontent.com/78875455/165054032-381b1a8e-a638-434b-8e3b-12100d384596.mp4
 
 ## Built With
 
