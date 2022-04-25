@@ -1,22 +1,19 @@
 const buttons = document.querySelectorAll('.password-btn');
-const inputRange = document.querySelector('#slider');
 const passwordLength = document.querySelector('#input-range p span');
 const symbolsCheckbox = document.querySelector('#symbols');
 const lettersCheckbox = document.querySelector('#letters');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const generatorBtn = document.querySelector('#generator-btn button');
-const popUp = document.querySelector('#notification')
+const popUp = document.querySelector('.pop-up');
+const inputRange = document.querySelector('#slider');
+const rangeValue = document.querySelector('#slider-value div');
 
 let charset;
 let password = "";
 
-buttons.forEach(button => {
-  button.innerHTML = '<img src="assets/Icon-dots.png" alt="Icon-dots">';
-});
-
 inputRange.addEventListener('input', () => {
   const newValue = inputRange.value;
-  passwordLength.textContent = newValue;
+  rangeValue.textContent = newValue;
 });
 
 checkboxes.forEach(checkbox => {
@@ -52,18 +49,18 @@ generatorBtn.addEventListener('click', () => {
   buttons.forEach(button => {
     password = "";
     button.textContent = generatePassword();
-
   });
 });
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    if (button.innerHTML !== '<img src="assets/Icon-dots.png" alt="Icon-dots">') {
+    if (button.innerHTML !== '<i class="fa-solid fa-ellipsis fa-xl"></i>') {
       navigator.clipboard.writeText(button.innerHTML);
 
-      popUp.setAttribute('id', '');
-      setTimeout(function() {
-        popUp.setAttribute('id', 'notification');
+      popUp.classList.add('animation');
+
+      setTimeout(function () {
+        popUp.classList.remove('animation');
       }, 3000)
     }
   });

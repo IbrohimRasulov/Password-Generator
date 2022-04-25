@@ -1,0 +1,35 @@
+/** The popup design code */
+.pop-up {
+  background-color: var(--green);
+  width: 250px;
+  height: 70px;
+  border-radius: 10px;
+  vertical-align: middle;
+  box-shadow: 8px 16px 16px rgba(0, 0, 0, 0.445);
+  position: fixed;
+  top: 30px;
+  right: -100%;
+}
+
+.pop-up p {
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--primary-text);
+  font-weight: bold;
+  line-height: 70px;
+}
+
+/** The animation code */
+.animation {
+  animation-name: popup;
+  animation-duration: 3s;
+  transition: ease-in-out;
+}
+
+@keyframes popup {
+  0% {right:-100%;}
+  25% {right:30px;}
+  50% {right:20px;}
+  75% {right:30px;}
+  100% {right:-100%;}
+}

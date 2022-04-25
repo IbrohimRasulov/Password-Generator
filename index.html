@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Generator</title>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/input-range.css">
+  <link rel="stylesheet" href="css/popup-animation.css">
+  <link rel="stylesheet" href="css/checkbox.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -21,8 +23,11 @@
 
     <div id="settings">
       <div id="input-range">
-        <p>Characters in your password: <span>8</span></p>
         <input type="range" min="4" max="16" value="8" step="1" id="slider">
+        <div id="slider-value">
+          <div>8</div>
+        </div>
+        <p>characters in your password</p>
       </div>
       <div id="input-symbols">
         <input type="checkbox" id="symbols" checked>
@@ -33,24 +38,25 @@
         <label for="letters">Letters</label>
       </div>
       <div id="generator-btn">
-        <button><img src="assets/Icon-thunder.png" alt="Icon-thunder"> Generate passwords</button>
+        <button><i class="fa-solid fa-bolt"></i> Generate passwords</button>
       </div>
     </div>
 
     <hr>
 
     <div id="options">
-      <button class="password-btn"></button>
-      <button class="password-btn"></button>
-      <button class="password-btn"></button>
-      <button class="password-btn"></button>
+      <button class="password-btn"><i class="fa-solid fa-ellipsis fa-xl"></i></button>
+      <button class="password-btn"><i class="fa-solid fa-ellipsis fa-xl"></i></button>
+      <button class="password-btn"><i class="fa-solid fa-ellipsis fa-xl"></i></button>
+      <button class="password-btn"><i class="fa-solid fa-ellipsis fa-xl"></i></button>
     </div>
   </div>
 
-  <div id="notification" class="pop-up">
-    <p>Password copied !</p>
+  <div class="pop-up">
+    <p>Password copied!</p>
   </div>
 
+  <script src="https://kit.fontawesome.com/96cfdae6d9.js" crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </body>
 
