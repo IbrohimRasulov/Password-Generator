@@ -4,7 +4,7 @@ const symbolsCheckbox = document.querySelector('#symbols');
 const lettersCheckbox = document.querySelector('#letters');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const generatorBtn = document.querySelector('#generator-btn button');
-const popUp = document.querySelector('#notification');
+const popUp = document.querySelector('.pop-up');
 const inputRange = document.querySelector('#slider');
 const rangeValue = document.querySelector('#slider-value div');
 
@@ -57,10 +57,10 @@ buttons.forEach(button => {
     if (button.innerHTML !== '<img src="assets/Icon-dots.png" alt="Icon-dots">') {
       navigator.clipboard.writeText(button.innerHTML);
 
-      popUp.setAttribute('id', '');
+      popUp.classList.add('animation');
 
       setTimeout(function () {
-        popUp.setAttribute('id', 'notification');
+        popUp.classList.remove('animation');
       }, 3000)
     }
   });
