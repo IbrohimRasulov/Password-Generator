@@ -5,7 +5,20 @@
   --white-text: #f1f5f9;
   --secondary-text: #b8c5d6;
   --main-green: #10b981;
-  --button-background: #273549;
+  --button-background: #1e293b92;
+
+  --shadow-color: 329deg 42% 7%;
+  --shadow-elevation-low:
+    0.3px 0.3px 0.3px hsl(var(--shadow-color) / 1),
+    1.6px 1.7px 1.8px -5px hsl(var(--shadow-color) / 0.78);
+  --shadow-elevation-medium:
+    0.3px 0.3px 0.3px hsl(var(--shadow-color) / 1),
+    7.9px 8.4px 8.6px -5px hsl(var(--shadow-color) / 1);
+  --shadow-elevation-high:
+    0.3px 0.3px 0.3px hsl(var(--shadow-color) / 1),
+    2.1px 2.2px 2.3px -1.7px hsl(var(--shadow-color) / 1),
+    14.3px 15.2px 15.7px -3.3px hsl(var(--shadow-color) / 1),
+    47.6px 50.6px 52.1px -5px hsl(var(--shadow-color) / 0.51);
 }
 
 * {
@@ -34,7 +47,7 @@ body {
 
 #container {
   width: 600px;
-  height: 75vh;
+  height: 80vh;
   background-color: var(--background);
   position: absolute;
   top: 50%;
@@ -65,13 +78,57 @@ body {
   font-weight: bold;
 }
 
+#settings {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "range range range"
+    "symbol button button"
+    "letter button button";
+  row-gap: 5px;
+}
 
+#input-range {
+  grid-area: range;
+}
 
+#input-symbols {
+  grid-area: symbol;
+}
 
+#input-letters {
+  grid-area: letter;
+}
 
+#generator-btn {
+  grid-area: button;
+  place-self: center;
+}
 
 #generator-btn button {
   background-color: var(--main-green);
+  border: 1px solid var(--main-green);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-elevation-medium);
+  transition: ease-in-out 0.08s;
+  color: var(--white-text);
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 5px 12px;
+}
+
+#generator-btn button img {
+  padding-right: 5px;
+}
+
+#generator-btn button:active {
+  box-shadow: var(--shadow-elevation-low);
+  transform: scale(0.96);
 }
 
 #generator-btn img {
@@ -79,11 +136,34 @@ body {
   display: inline;
 }
 
+hr {
+  border: 1px solid var(--button-background);
+  border-radius: 1px;
+  margin: 30px 0;
+}
+
+#options {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 15px;
+}
+
 .password-btn {
   background-color: var(--button-background);
   border-radius: 8px;
-  padding: 10px 30px;
+  height: 45px;
   outline: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-green);
+}
+
+.password-btn img {
+  width: 30px;
+  filter: opacity(0.1);
 }

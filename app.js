@@ -11,10 +11,6 @@ const rangeValue = document.querySelector('#slider-value div');
 let charset;
 let password = "";
 
-buttons.forEach(button => {
-  button.innerHTML = '<img src="assets/Icon-dots.png" alt="Icon-dots">';
-});
-
 inputRange.addEventListener('input', () => {
   const newValue = inputRange.value;
   rangeValue.textContent = newValue;
