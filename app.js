@@ -8,9 +8,6 @@ const popUp = document.querySelector('.pop-up');
 const inputRange = document.querySelector('#slider');
 const rangeValue = document.querySelector('#slider-value div');
 
-let charset;
-let password = "";
-
 inputRange.addEventListener('input', () => {
   const newValue = inputRange.value;
   rangeValue.textContent = newValue;
@@ -23,12 +20,15 @@ checkboxes.forEach(checkbox => {
 });
 
 const generatePassword = function () {
+  let password = "";
+  let charset;
+
   switch (true) {
     case (symbolsCheckbox.checked && lettersCheckbox.checked):
-      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~-=`|{}[]:;?<>,./";
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^*()_+~-=`|{}[]:;?,./";
       break;
     case (symbolsCheckbox.checked):
-      charset = "0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+      charset = "0123456789!@#$%^*()_+~`|}{[]:;?,./-=";
       break;
     case (lettersCheckbox.checked):
       charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -47,7 +47,6 @@ const generatePassword = function () {
 
 generatorBtn.addEventListener('click', () => {
   buttons.forEach(button => {
-    password = "";
     button.textContent = generatePassword();
   });
 });
